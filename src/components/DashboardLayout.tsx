@@ -51,6 +51,11 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
           },
         ],
       },
+      {
+        path: "/master-gerbang",
+        label: "Master Gerbang",
+        icon: <HomeIcon className="w-5 h-5" />,
+      },
     ],
     []
   );

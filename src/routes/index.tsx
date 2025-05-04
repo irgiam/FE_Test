@@ -7,6 +7,7 @@ import DashboardLayout from "../components/DashboardLayout";
 import Login from "../views/auth/Login";
 import Dashboard from "../views/dashboard";
 import LalinOverview from "../views/lalu-lintas/LalinOverview";
+import MasterGerbang from "../views/Gerbang/MasterGerbang";
 
 // Protected Route Component
 const PrivateRoute = ({ redirectPath = "/login" }) => {
@@ -49,6 +50,7 @@ export default function AppRoutes() {
       <Route element={<PrivateRoute />}>
         <Route path="/" element={<Dashboard />} />
         <Route path="/lalin-perday-report" element={<LalinOverview />} />
+        <Route path="/master-gerbang" element={<MasterGerbang />} />
       </Route>
 
       {/* Catch all route - redirect to login if not authenticated, dashboard if authenticated */}

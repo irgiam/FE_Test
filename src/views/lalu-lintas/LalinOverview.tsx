@@ -1,23 +1,9 @@
 import React, { useCallback, useEffect, useState, useRef } from "react";
 import useLogout from "../../services/useLogout";
 import Cookies from "js-cookie";
-import Api from "../../services/Api";
-import {
-  PlusIcon,
-  Trash,
-  Download,
-  Search,
-  Filter,
-  RefreshCw,
-} from "lucide-react";
-import moment from "moment";
-
-interface PaginationState {
-  currentPage: number;
-  totalPages: number;
-  totalData: number;
-  pageSize: number;
-}
+import Api from "../../services/api";
+import { Trash, Download, Search, Filter, RefreshCw } from "lucide-react";
+import { PaginationState } from "../../types/types";
 
 interface FilterState {
   search: string;
@@ -232,6 +218,29 @@ const LalinOverview = () => {
           <Download className="w-5 h-5 mr-2" />
           Export
         </button>
+      </div>
+
+      {/* Tabs untuk filter type */}
+      <div className="flex gap-2 mb-4">
+        {["all", "Tunai", "E-Toll", "Flo", "KTP"].map((typeOption) => (
+          <button
+            key={typeOption}
+            onClick={() => {
+              setFilterState((prev) => ({
+                ...prev,
+                type: typeOption,
+              }));
+              fetchDataTable(1, paginationState.pageSize);
+            }}
+            className={`px-4 py-2 rounded-full border ${
+              filterState.type === typeOption
+                ? "!bg-blue-600 text-white"
+                : "!bg-white text-gray-600 border-gray-300"
+            } hover:bg-blue-500 hover:text-white transition-colors`}
+          >
+            {typeOption.charAt(0).toUpperCase() + typeOption.slice(1)}
+          </button>
+        ))}
       </div>
 
       {/* Error state with retry button */}

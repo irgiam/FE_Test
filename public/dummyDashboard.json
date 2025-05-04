@@ -1,0 +1,38 @@
+{
+  "data": {
+    "data": {
+      "tanggal": "2025-05-01",
+      "bankTraffic": [
+        { "bank": "BCA", "jumlah": 30 },
+        { "bank": "BRI", "jumlah": 45 },
+        { "bank": "BNI", "jumlah": 60 },
+        { "bank": "DKI", "jumlah": 20 },
+        { "bank": "Mandiri", "jumlah": 70 },
+        { "bank": "Mega", "jumlah": 90 },
+        { "bank": "Flo", "jumlah": 25 }
+      ],
+      "gateTraffic": [
+        { "gerbang": "Gerbang 1", "jumlah": 30 },
+        { "gerbang": "Gerbang 2", "jumlah": 45 },
+        { "gerbang": "Gerbang 3", "jumlah": 60 },
+        { "gerbang": "Gerbang 4", "jumlah": 20 },
+        { "gerbang": "Gerbang 5", "jumlah": 80 }
+      ],
+      "shiftTraffic": [
+        { "name": "Shift 1", "value": 60 },
+        { "name": "Shift 2", "value": 20 },
+        { "name": "Shift 3", "value": 20 }
+      ],
+      "ruasTraffic": [
+        { "name": "Ruas 1", "value": 60 },
+        { "name": "Ruas 2", "value": 20 },
+        { "name": "Ruas 3", "value": 20 }
+      ]
+    },
+    "meta": {
+      "code": 200,
+      "message": "Success get list task",
+      "status": "success"
+    }
+  }
+}
