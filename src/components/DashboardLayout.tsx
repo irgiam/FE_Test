@@ -45,7 +45,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
         icon: <FileTextIcon className="w-5 h-5" />,
         children: [
           {
-            path: "/perday-report",
+            path: "/lalin-perday-report",
             label: "Laporan Perhari",
             icon: <MapIcon className="w-5 h-5" />,
           },

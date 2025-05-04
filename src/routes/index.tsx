@@ -6,6 +6,8 @@ import DashboardLayout from "../components/DashboardLayout";
 // import views
 import Login from "../views/auth/Login";
 import Dashboard from "../views/dashboard";
+import LalinOverview from "../views/lalu-lintas/LalinOverview";
+
 // Protected Route Component
 const PrivateRoute = ({ redirectPath = "/login" }) => {
   const { isAuthenticated } = useContext(AuthContext);
@@ -46,6 +48,7 @@ export default function AppRoutes() {
       {/* Protected Routes */}
       <Route element={<PrivateRoute />}>
         <Route path="/" element={<Dashboard />} />
+        <Route path="/lalin-perday-report" element={<LalinOverview />} />
       </Route>
 
       {/* Catch all route - redirect to login if not authenticated, dashboard if authenticated */}
